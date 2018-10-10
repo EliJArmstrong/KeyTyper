@@ -73,8 +73,9 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(13, 67);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(896, 44);
+            this.textBox1.Size = new System.Drawing.Size(896, 95);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "The quick brown fox jumps over the lazy dog";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);

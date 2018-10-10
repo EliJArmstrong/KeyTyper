@@ -16,6 +16,8 @@ namespace KeyTypper
     {
         private Dictionary<Keys, Label> keyAndLabel = new Dictionary<Keys, Label>();
 
+        string testString = "The quick brown fox jumps over the lazy dog";
+
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +44,30 @@ namespace KeyTypper
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+            TextBox newTextBox = sender as TextBox;
+
+            for(var i = 0; i < newTextBox.Text.Length; i++) {
+                if (newTextBox.Text[i].Equals(testString[i]))
+                {
+                    newTextBox.ForeColor = Color.Blue;
+                }
+                else
+                {
+                    newTextBox.ForeColor = Color.Red;
+                }
+            }
+            if(newTextBox.Text.Length == testString.Length)
+            {
+                foreach(var x in keyAndLabel)
+                {
+                    x.Value.BackColor = Control.DefaultBackColor;
+                }
+                MessageBox.Show("Good Job");
+                newTextBox.Text = "";
+            }
+            //newTextBox.Text = newTextBox.Text + testString.Substring(newTextBox.Text.Length);
+
+
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
