@@ -46,25 +46,25 @@ namespace KeyTypper
         {
             TextBox newTextBox = sender as TextBox;
 
-            for(var i = 0; i < newTextBox.Text.Length; i++) {
-                if (newTextBox.Text[i].Equals(testString[i]))
-                {
-                    newTextBox.ForeColor = Color.Blue;
-                }
-                else
-                {
-                    newTextBox.ForeColor = Color.Red;
-                }
-            }
-            if(newTextBox.Text.Length == testString.Length)
-            {
-                foreach(var x in keyAndLabel)
-                {
-                    x.Value.BackColor = Control.DefaultBackColor;
-                }
-                MessageBox.Show("Good Job");
-                newTextBox.Text = "";
-            }
+            /* for(var i = 0; i < newTextBox.Text.Length; i++) {
+                 if (newTextBox.Text[i].Equals(testString[i]))
+                 {
+                     newTextBox.ForeColor = Color.Blue;
+                 }
+                 else
+                 {
+                     newTextBox.ForeColor = Color.Red;
+                 }
+             }
+             if(newTextBox.Text.Length == testString.Length)
+             {
+                 foreach(var x in keyAndLabel)
+                 {
+                     x.Value.BackColor = Control.DefaultBackColor;
+                 }
+                 MessageBox.Show("Good Job");
+                 newTextBox.Text = "";
+             } */
             //newTextBox.Text = newTextBox.Text + testString.Substring(newTextBox.Text.Length);
 
 
