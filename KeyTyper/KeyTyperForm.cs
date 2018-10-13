@@ -44,26 +44,26 @@ namespace KeyTyper
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            TextBox newTextBox = sender as TextBox;
+            TextBox textBox = sender as TextBox;
 
-            for(var i = 0; i < newTextBox.Text.Length; i++) {
-                if (newTextBox.Text[i].Equals(testString[i]))
+            for(var i = 0; i < textBox.Text.Length; i++) {
+                if (textBox.Text[i].Equals(testString[i]))
                 {
-                    newTextBox.ForeColor = Color.Blue;
+                    textBox.ForeColor = Color.Blue;
                 }
                 else
                 {
-                    newTextBox.ForeColor = Color.Red;
+                    textBox.ForeColor = Color.Red;
                 }
             }
-            if(newTextBox.Text.Length == testString.Length)
+            if(textBox.Text.Length == testString.Length)
             {
                 foreach(var x in keyAndLabel)
                 {
                     x.Value.BackColor = Control.DefaultBackColor;
                 }
                 MessageBox.Show("Good Job");
-                newTextBox.Text = "";
+                textBox.Text = "";
             }
             //newTextBox.Text = newTextBox.Text + testString.Substring(newTextBox.Text.Length);
 
@@ -72,9 +72,17 @@ namespace KeyTyper
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
+            //Console.WriteLine(e.KeyCode);
+
             if (keyAndLabel.ContainsKey(e.KeyCode))
             {
                 keyAndLabel[e.KeyCode].BackColor = Color.Orange;
+            } else if (e.KeyCode.Equals(Keys.Back))
+            {
+                TextBox textBox = sender as TextBox;
+                textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
+                MessageBox.Show("Nope, live with it and get better.");
+                 
             }
         }
 
