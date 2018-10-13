@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KeyTypper.Properties
+namespace KeyTyper.Properties
 {
 
 
