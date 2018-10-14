@@ -52,6 +52,9 @@
     <Compile Include="KeyTyperForm.Designer.cs">
       <DependentUpon>KeyTyperForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LabelExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="KeyTyperForm.resx">

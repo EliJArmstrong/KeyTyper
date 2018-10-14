@@ -14,7 +14,7 @@ namespace KeyTyper
 {
     public partial class KeyTyperForm : Form
     {
-        private Dictionary<Keys, Label> keyAndLabel = new Dictionary<Keys, Label>();
+        private Dictionary<Keys, LabelExt> keyAndLabel = new Dictionary<Keys, LabelExt>();
 
         string testString = "The quick brown fox jumps over the lazy dog";
 
@@ -22,13 +22,16 @@ namespace KeyTyper
         {
             InitializeComponent();
             AddLabelToDict(this);
+            richTextBox1.Focus();
         }
 
         public void AddLabelToDict(Control control)
         {
-            if (control is Label)
+            
+            if (control is LabelExt)
             {
-                keyAndLabel.Add((Keys)control.Text[0], control as Label);
+                LabelExt labelExt = control as LabelExt;
+                keyAndLabel.Add(labelExt.Key, labelExt);
             }
             else
             {
@@ -42,30 +45,30 @@ namespace KeyTyper
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            RichTextBox textBox = sender as RichTextBox;
-
-
-
-            for (var i = 0; i < textBox.Text.Length; i++)
-            {
-                if (textBox.Text[i].Equals(testString[i]))
-                {
-                    textBox.ForeColor = Color.Blue;
-                }
-                else
-                {
-                    textBox.ForeColor = Color.Red;
-                }
-            }
-            if (textBox.Text.Length == testString.Length)
+            /*Console.WriteLine(richTextBox1.Text);
+            if (richTextBox1.Text.Length == testString.Length)
             {
                 foreach (var x in keyAndLabel)
                 {
                     x.Value.BackColor = Control.DefaultBackColor;
                 }
+                for (var i = 0; i < richTextBox1.Text.Length; i++)
+                {
+                    if (richTextBox1.Text[i].Equals(testString[i]))
+                    {
+                        richTextBox1.SelectionStart = i;
+                        richTextBox1.SelectionLength = 1;
+                        richTextBox1.SelectionColor = Color.Blue;
+                    }
+                    else
+                    {
+                        richTextBox1.SelectionStart = i;
+                        richTextBox1.SelectionLength = 1;
+                        richTextBox1.ForeColor = Color.Red;
+                    }
+                }
                 MessageBox.Show("Good Job");
-                textBox.Text = "";
-            }
+            }*/
         }
 
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -76,11 +79,23 @@ namespace KeyTyper
             {
                 keyAndLabel[e.KeyCode].BackColor = Color.Orange;
             }
-            else if (e.KeyCode.Equals(Keys.Back))
+            else
             {
-                RichTextBox textBox = sender as RichTextBox;
-                MessageBox.Show("Nope, live with it and get better.");
-
+                if(e.KeyCode == Keys.ShiftKey)
+                {
+                    lShiftKeyLbl.BackColor = Color.Orange;
+                    rShiftKeyLbl.BackColor = Color.Orange;
+                }
+                else if (e.KeyCode == Keys.ControlKey)
+                {
+                    lControlKeyLbl.BackColor = Color.Orange;
+                    rControlKeyLbl.BackColor = Color.Orange;
+                }
+                else if (e.KeyCode == Keys.Menu)
+                {
+                    lAltKeyLbl.BackColor = Color.Orange;
+                    rAltKeyLbl.BackColor = Color.Orange;
+                }
             }
         }
 
@@ -90,6 +105,23 @@ namespace KeyTyper
             {
                 keyAndLabel[e.KeyCode].BackColor = Control.DefaultBackColor;
             }
+            else
+            {
+                if (e.KeyCode == Keys.ShiftKey)
+                {
+                    lShiftKeyLbl.BackColor = Control.DefaultBackColor;
+                    rShiftKeyLbl.BackColor = Control.DefaultBackColor;
+                } else if(e.KeyCode == Keys.ControlKey)
+                {
+                    lControlKeyLbl.BackColor = Control.DefaultBackColor;
+                    rControlKeyLbl.BackColor = Control.DefaultBackColor;
+                } else if (e.KeyCode == Keys.Menu)
+                {
+                    lAltKeyLbl.BackColor = Control.DefaultBackColor;
+                    rAltKeyLbl.BackColor = Control.DefaultBackColor;
+                }
+            }
         }
     }
 }
+
