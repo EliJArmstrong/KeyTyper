@@ -29,7 +29,6 @@ namespace KeyTyper
             if (control is Label)
             {
                 keyAndLabel.Add((Keys)control.Text[0], control as Label);
-                Console.WriteLine((Keys)control.Text[0]);
             }
             else
             {
@@ -41,12 +40,14 @@ namespace KeyTyper
             }
         }
 
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            TextBox textBox = sender as TextBox;
+            RichTextBox textBox = sender as RichTextBox;
 
-            for(var i = 0; i < textBox.Text.Length; i++) {
+
+
+            for (var i = 0; i < textBox.Text.Length; i++)
+            {
                 if (textBox.Text[i].Equals(testString[i]))
                 {
                     textBox.ForeColor = Color.Blue;
@@ -56,37 +57,34 @@ namespace KeyTyper
                     textBox.ForeColor = Color.Red;
                 }
             }
-            if(textBox.Text.Length == testString.Length)
+            if (textBox.Text.Length == testString.Length)
             {
-                foreach(var x in keyAndLabel)
+                foreach (var x in keyAndLabel)
                 {
                     x.Value.BackColor = Control.DefaultBackColor;
                 }
                 MessageBox.Show("Good Job");
                 textBox.Text = "";
             }
-            //newTextBox.Text = newTextBox.Text + testString.Substring(newTextBox.Text.Length);
-
-
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            //Console.WriteLine(e.KeyCode);
+            Console.WriteLine(e.KeyCode);
 
             if (keyAndLabel.ContainsKey(e.KeyCode))
             {
                 keyAndLabel[e.KeyCode].BackColor = Color.Orange;
-            } else if (e.KeyCode.Equals(Keys.Back))
+            }
+            else if (e.KeyCode.Equals(Keys.Back))
             {
-                TextBox textBox = sender as TextBox;
-                textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
+                RichTextBox textBox = sender as RichTextBox;
                 MessageBox.Show("Nope, live with it and get better.");
-                 
+
             }
         }
 
-        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        private void richTextBox1_KeyUp(object sender, KeyEventArgs e)
         {
             if (keyAndLabel.ContainsKey(e.KeyCode))
             {
