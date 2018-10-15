@@ -73,35 +73,9 @@ namespace KeyTyper
                 richTextBox1.ScrollToCaret();
             }
 
-
-
-            /*if (richTextBox1.Text.Length == testString.Length)
-            {
-                foreach (var x in keyAndLabel)
-                {
-                    x.Value.BackColor = Control.DefaultBackColor;
-                }
-                for (var i = 0; i < richTextBox1.Text.Length; i++)
-                {
-                    if (richTextBox1.Text[i].Equals(testString[i]))
-                    {
-                        richTextBox1.SelectionStart = i;
-                        richTextBox1.SelectionLength = 1;
-                        richTextBox1.SelectionColor = Color.Blue;
-                        blue++;
-                    }
-                    else
-                    {
-                        richTextBox1.SelectionStart = i;
-                        richTextBox1.SelectionLength = 1;
-                        richTextBox1.ForeColor = Color.Red;
-                        red++;
-                    }
-                }*/
             Console.WriteLine($"Red: {red}");
             Console.WriteLine($"Blue: {blue}");
             //MessageBox.Show("Good Job");
-            //}
         }
 
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
