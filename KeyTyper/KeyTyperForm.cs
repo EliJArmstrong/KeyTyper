@@ -19,6 +19,9 @@ namespace KeyTyper
 
         string testString = "The quick brown fox jumps over the lazy dog";
 
+        int blue = 0;
+        int red = 0;
+
         public KeyTyperForm()
         {
             InitializeComponent();
@@ -29,7 +32,7 @@ namespace KeyTyper
 
         public void AddLabelToDict(Control control)
         {
-            
+
             if (control is LabelExt)
             {
                 LabelExt labelExt = control as LabelExt;
@@ -49,13 +52,10 @@ namespace KeyTyper
         {
             Console.WriteLine(richTextBox1.Text);
 
-            int blue = 0;
-            int red = 0;
 
-            richTextBox1.DeselectAll();
 
             Console.WriteLine(richTextBox1.TextLength);
-            if(richTextBox1.TextLength != 0)
+            if (richTextBox1.TextLength != 0)
             {
                 richTextBox1.Select(richTextBox1.TextLength - 1, 1);
                 if (richTextBox1.TextLength <= testString.Length && richTextBox1.Text[richTextBox1.TextLength - 1].Equals(testString[richTextBox1.TextLength - 1]))
@@ -68,9 +68,12 @@ namespace KeyTyper
                     richTextBox1.SelectionColor = Color.Red;
                     red++;
                 }
+
+                richTextBox1.SelectionStart = richTextBox1.Text.Length;
+                richTextBox1.ScrollToCaret();
             }
 
-               
+
 
             /*if (richTextBox1.Text.Length == testString.Length)
             {
@@ -95,9 +98,9 @@ namespace KeyTyper
                         red++;
                     }
                 }*/
-                Console.WriteLine($"Red: {red}");
-                Console.WriteLine($"Blue: {blue}");
-                //MessageBox.Show("Good Job");
+            Console.WriteLine($"Red: {red}");
+            Console.WriteLine($"Blue: {blue}");
+            //MessageBox.Show("Good Job");
             //}
         }
 
@@ -109,7 +112,7 @@ namespace KeyTyper
             }
             else
             {
-                if(e.KeyCode == Keys.ShiftKey)
+                if (e.KeyCode == Keys.ShiftKey)
                 {
                     lShiftKeyLbl.BackColor = Color.Orange;
                     rShiftKeyLbl.BackColor = Color.Orange;
@@ -139,11 +142,13 @@ namespace KeyTyper
                 {
                     lShiftKeyLbl.BackColor = Control.DefaultBackColor;
                     rShiftKeyLbl.BackColor = Control.DefaultBackColor;
-                } else if(e.KeyCode == Keys.ControlKey)
+                }
+                else if (e.KeyCode == Keys.ControlKey)
                 {
                     lControlKeyLbl.BackColor = Control.DefaultBackColor;
                     rControlKeyLbl.BackColor = Control.DefaultBackColor;
-                } else if (e.KeyCode == Keys.Menu)
+                }
+                else if (e.KeyCode == Keys.Menu)
                 {
                     lAltKeyLbl.BackColor = Control.DefaultBackColor;
                     rAltKeyLbl.BackColor = Control.DefaultBackColor;
