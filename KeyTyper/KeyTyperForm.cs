@@ -62,15 +62,11 @@ namespace KeyTyper
                 {
                     richTextBox1.SelectionColor = Color.Blue;
                     blue++;
-                    richTextBox1.DeselectAll();
-                    SendKeys.Send("{RIGHT}");
                 }
                 else
                 {
                     richTextBox1.SelectionColor = Color.Red;
                     red++;
-                    richTextBox1.DeselectAll();
-                    SendKeys.Send("{RIGHT}");
                 }
             }
 
@@ -152,7 +148,6 @@ namespace KeyTyper
                     lAltKeyLbl.BackColor = Control.DefaultBackColor;
                     rAltKeyLbl.BackColor = Control.DefaultBackColor;
                 }
-                SendKeys.Send("{RIGHT}");
             }
         }
     }
