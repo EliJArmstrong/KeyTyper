@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace KeyTyper
             InitializeComponent();
             AddLabelToDict(this);
             richTextBox1.Focus();
+            //richTextBox1.Enabled = false;
         }
 
         public void AddLabelToDict(Control control)
@@ -45,8 +47,34 @@ namespace KeyTyper
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            /*Console.WriteLine(richTextBox1.Text);
-            if (richTextBox1.Text.Length == testString.Length)
+            Console.WriteLine(richTextBox1.Text);
+
+            int blue = 0;
+            int red = 0;
+
+            Console.WriteLine(richTextBox1.TextLength);
+            if(richTextBox1.TextLength != 0)
+            {
+                richTextBox1.Select(richTextBox1.TextLength - 1, 1);
+                if (richTextBox1.TextLength <= testString.Length && richTextBox1.Text[richTextBox1.TextLength - 1].Equals(testString[richTextBox1.TextLength - 1]))
+                {
+                    richTextBox1.SelectionColor = Color.Blue;
+                    blue++;
+                    richTextBox1.DeselectAll();
+                    SendKeys.Send("{RIGHT}");
+                }
+                else
+                {
+                    richTextBox1.SelectionColor = Color.Red;
+                    red++;
+                    richTextBox1.DeselectAll();
+                    SendKeys.Send("{RIGHT}");
+                }
+            }
+
+               
+
+            /*if (richTextBox1.Text.Length == testString.Length)
             {
                 foreach (var x in keyAndLabel)
                 {
@@ -59,22 +87,24 @@ namespace KeyTyper
                         richTextBox1.SelectionStart = i;
                         richTextBox1.SelectionLength = 1;
                         richTextBox1.SelectionColor = Color.Blue;
+                        blue++;
                     }
                     else
                     {
                         richTextBox1.SelectionStart = i;
                         richTextBox1.SelectionLength = 1;
                         richTextBox1.ForeColor = Color.Red;
+                        red++;
                     }
-                }
-                MessageBox.Show("Good Job");
-            }*/
+                }*/
+                Console.WriteLine($"Red: {red}");
+                Console.WriteLine($"Blue: {blue}");
+                //MessageBox.Show("Good Job");
+            //}
         }
 
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            Console.WriteLine(e.KeyCode);
-
             if (keyAndLabel.ContainsKey(e.KeyCode))
             {
                 keyAndLabel[e.KeyCode].BackColor = Color.Orange;
@@ -96,6 +126,7 @@ namespace KeyTyper
                     lAltKeyLbl.BackColor = Color.Orange;
                     rAltKeyLbl.BackColor = Color.Orange;
                 }
+                richTextBox1.DeselectAll();
             }
         }
 
@@ -120,6 +151,7 @@ namespace KeyTyper
                     lAltKeyLbl.BackColor = Control.DefaultBackColor;
                     rAltKeyLbl.BackColor = Control.DefaultBackColor;
                 }
+                richTextBox1.DeselectAll();
             }
         }
     }
