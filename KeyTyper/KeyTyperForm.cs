@@ -52,6 +52,8 @@ namespace KeyTyper
             int blue = 0;
             int red = 0;
 
+            richTextBox1.DeselectAll();
+
             Console.WriteLine(richTextBox1.TextLength);
             if(richTextBox1.TextLength != 0)
             {
@@ -126,7 +128,6 @@ namespace KeyTyper
                     lAltKeyLbl.BackColor = Color.Orange;
                     rAltKeyLbl.BackColor = Color.Orange;
                 }
-                richTextBox1.DeselectAll();
             }
         }
 
@@ -151,7 +152,7 @@ namespace KeyTyper
                     lAltKeyLbl.BackColor = Control.DefaultBackColor;
                     rAltKeyLbl.BackColor = Control.DefaultBackColor;
                 }
-                richTextBox1.DeselectAll();
+                SendKeys.Send("{RIGHT}");
             }
         }
     }
