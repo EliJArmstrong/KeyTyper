@@ -33,6 +33,7 @@ namespace KeyTyper
                 "just for you. For all the lives that you save each and " +
                 "every day. David Harris" };
 
+        string selectedLevelString;
 
         int blue = 0;
         int red = 0;
@@ -67,15 +68,12 @@ namespace KeyTyper
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            Console.WriteLine(richTextBox1.Text);
-            Console.WriteLine(richTextBox1.TextLength);
-            if (richTextBox1.TextLength != 0)
+            if (richTextBox1.TextLength != 0 && textBox1.Text.Length != 0)
             {
                 textBox1.Text = textBox1.Text.Substring(1);
                 richTextBox1.Select(richTextBox1.TextLength - 1, 1);
-                if (richTextBox1.TextLength <= textBox1.TextLength && 
-                    richTextBox1.Text[richTextBox1.TextLength - 1]
-                    .Equals(textBox1.Text[richTextBox1.TextLength - 1]))
+                if (richTextBox1.Text[richTextBox1.TextLength - 1]
+                    .Equals(selectedLevelString[richTextBox1.TextLength - 1]))
                 {
                     richTextBox1.SelectionColor = Color.Blue;
                     blue++;
@@ -95,9 +93,7 @@ namespace KeyTyper
                 richTextBox1.SelectionBackColor = richTextBox1.BackColor;
             }
 
-            Console.WriteLine($"Red: {red}");
-            Console.WriteLine($"Blue: {blue}");
-            //MessageBox.Show("Good Job");
+ 
         }
 
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -158,11 +154,24 @@ namespace KeyTyper
             {
                 MessageBox.Show("BackSpace has been disabled.");
             }
+            if (richTextBox1.Text.Length >= selectedLevelString.Length)
+            {
+                Form2 form2 = new Form2();
+                string space = "                          ";
+                richTextBox1.Enabled = false;
+                form2.SetLabels(selectedLevelString.Length, red, blue);
+                form2.Show();
+                richTextBox1.Text =  space + "Select a level to start again.";
+                deselectLabels();
+                pictureBox1.Visible = false;
+                label1.Visible = false;
+            }
         }
 
         private void levelOneBtn_Click(object sender, EventArgs e)
         {
             textBox1.Text = testString[0];
+            selectedLevelString = testString[0];
             richTextBox1.Text = "";
             richTextBox1.Enabled = true;
             richTextBox1.Focus();
@@ -176,6 +185,7 @@ namespace KeyTyper
         private void LevelTwoBtn_Click(object sender, EventArgs e)
         {
             textBox1.Text = testString[1];
+            selectedLevelString = testString[1];
             richTextBox1.Text = "";
             richTextBox1.Enabled = true;
             richTextBox1.Focus();
@@ -188,6 +198,7 @@ namespace KeyTyper
         private void levelThreeBtn_Click(object sender, EventArgs e)
         {
             textBox1.Text = testString[2];
+            selectedLevelString = testString[2];
             richTextBox1.Text = "";
             richTextBox1.Enabled = true;
             richTextBox1.Focus();
@@ -195,7 +206,16 @@ namespace KeyTyper
             blue = 0;
             pictureBox1.Visible = true;
             label1.Visible = true;
+
         }
+        
+        private void deselectLabels()
+        {
+            foreach (var label in keyAndLabel.Values){
+                label.BackColor = Control.DefaultBackColor;
+            }
+        }
+        
     }
 }
 

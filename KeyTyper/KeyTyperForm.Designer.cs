@@ -31,6 +31,7 @@ namespace KeyTyper
         private void InitializeComponent()
         {
             this.gradientGroup1 = new KeyTyper.GradientGroup();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.levelThreeBtn = new System.Windows.Forms.Button();
             this.LevelTwoBtn = new System.Windows.Forms.Button();
@@ -96,6 +97,7 @@ namespace KeyTyper
             this.capsKeyLbl = new KeyTyper.LabelExt();
             this.aKeyLbl = new KeyTyper.LabelExt();
             this.gradientGroup1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gradientGroup1
@@ -103,6 +105,7 @@ namespace KeyTyper
             this.gradientGroup1.BackColor = System.Drawing.SystemColors.Control;
             this.gradientGroup1.ColorBottom = System.Drawing.Color.Navy;
             this.gradientGroup1.ColorTop = System.Drawing.Color.Teal;
+            this.gradientGroup1.Controls.Add(this.pictureBox1);
             this.gradientGroup1.Controls.Add(this.label1);
             this.gradientGroup1.Controls.Add(this.levelThreeBtn);
             this.gradientGroup1.Controls.Add(this.LevelTwoBtn);
@@ -173,13 +176,24 @@ namespace KeyTyper
             this.gradientGroup1.TabIndex = 108;
             this.gradientGroup1.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::KeyTyper.Properties.Resources.coolArrowUP;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 70);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 114;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(41, 70);
+            this.label1.Location = new System.Drawing.Point(44, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 50);
             this.label1.TabIndex = 113;
@@ -187,7 +201,7 @@ namespace KeyTyper
             // 
             // levelThreeBtn
             // 
-            this.levelThreeBtn.Location = new System.Drawing.Point(532, 70);
+            this.levelThreeBtn.Location = new System.Drawing.Point(532, 97);
             this.levelThreeBtn.Name = "levelThreeBtn";
             this.levelThreeBtn.Size = new System.Drawing.Size(75, 23);
             this.levelThreeBtn.TabIndex = 111;
@@ -197,7 +211,7 @@ namespace KeyTyper
             // 
             // LevelTwoBtn
             // 
-            this.LevelTwoBtn.Location = new System.Drawing.Point(411, 70);
+            this.LevelTwoBtn.Location = new System.Drawing.Point(411, 97);
             this.LevelTwoBtn.Name = "LevelTwoBtn";
             this.LevelTwoBtn.Size = new System.Drawing.Size(75, 23);
             this.LevelTwoBtn.TabIndex = 110;
@@ -207,7 +221,7 @@ namespace KeyTyper
             // 
             // levelOneBtn
             // 
-            this.levelOneBtn.Location = new System.Drawing.Point(292, 70);
+            this.levelOneBtn.Location = new System.Drawing.Point(292, 97);
             this.levelOneBtn.Name = "levelOneBtn";
             this.levelOneBtn.Size = new System.Drawing.Size(75, 23);
             this.levelOneBtn.TabIndex = 109;
@@ -223,7 +237,6 @@ namespace KeyTyper
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(896, 44);
             this.textBox1.TabIndex = 108;
-            this.textBox1.Text = "Test texts";
             // 
             // backKeyLbl
             // 
@@ -231,7 +244,7 @@ namespace KeyTyper
             this.backKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.backKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.backKeyLbl.Key = System.Windows.Forms.Keys.Back;
-            this.backKeyLbl.Location = new System.Drawing.Point(717, 213);
+            this.backKeyLbl.Location = new System.Drawing.Point(714, 230);
             this.backKeyLbl.Name = "backKeyLbl";
             this.backKeyLbl.Size = new System.Drawing.Size(166, 48);
             this.backKeyLbl.TabIndex = 54;
@@ -251,7 +264,7 @@ namespace KeyTyper
             this.richTextBox1.Size = new System.Drawing.Size(899, 78);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.TabStop = false;
-            this.richTextBox1.Text = "\n                               Select the level to start";
+            this.richTextBox1.Text = "                                Select a level to start";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
             this.richTextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyUp);
@@ -262,7 +275,7 @@ namespace KeyTyper
             this.rControlKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rControlKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.rControlKeyLbl.Key = System.Windows.Forms.Keys.RControlKey;
-            this.rControlKeyLbl.Location = new System.Drawing.Point(765, 442);
+            this.rControlKeyLbl.Location = new System.Drawing.Point(762, 459);
             this.rControlKeyLbl.Name = "rControlKeyLbl";
             this.rControlKeyLbl.Size = new System.Drawing.Size(118, 48);
             this.rControlKeyLbl.TabIndex = 107;
@@ -275,7 +288,7 @@ namespace KeyTyper
             this.oneKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.oneKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.oneKeyLbl.Key = System.Windows.Forms.Keys.D1;
-            this.oneKeyLbl.Location = new System.Drawing.Point(93, 213);
+            this.oneKeyLbl.Location = new System.Drawing.Point(90, 230);
             this.oneKeyLbl.Name = "oneKeyLbl";
             this.oneKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.oneKeyLbl.TabIndex = 55;
@@ -287,7 +300,7 @@ namespace KeyTyper
             this.rAltKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rAltKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.rAltKeyLbl.Key = System.Windows.Forms.Keys.RMenu;
-            this.rAltKeyLbl.Location = new System.Drawing.Point(665, 442);
+            this.rAltKeyLbl.Location = new System.Drawing.Point(662, 459);
             this.rAltKeyLbl.Name = "rAltKeyLbl";
             this.rAltKeyLbl.Size = new System.Drawing.Size(94, 48);
             this.rAltKeyLbl.TabIndex = 106;
@@ -300,7 +313,7 @@ namespace KeyTyper
             this.twoKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.twoKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.twoKeyLbl.Key = System.Windows.Forms.Keys.D2;
-            this.twoKeyLbl.Location = new System.Drawing.Point(145, 213);
+            this.twoKeyLbl.Location = new System.Drawing.Point(142, 230);
             this.twoKeyLbl.Name = "twoKeyLbl";
             this.twoKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.twoKeyLbl.TabIndex = 56;
@@ -312,7 +325,7 @@ namespace KeyTyper
             this.lAltKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lAltKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.lAltKeyLbl.Key = System.Windows.Forms.Keys.LMenu;
-            this.lAltKeyLbl.Location = new System.Drawing.Point(165, 442);
+            this.lAltKeyLbl.Location = new System.Drawing.Point(162, 459);
             this.lAltKeyLbl.Name = "lAltKeyLbl";
             this.lAltKeyLbl.Size = new System.Drawing.Size(94, 48);
             this.lAltKeyLbl.TabIndex = 105;
@@ -325,7 +338,7 @@ namespace KeyTyper
             this.eightKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eightKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.eightKeyLbl.Key = System.Windows.Forms.Keys.D8;
-            this.eightKeyLbl.Location = new System.Drawing.Point(457, 213);
+            this.eightKeyLbl.Location = new System.Drawing.Point(454, 230);
             this.eightKeyLbl.Name = "eightKeyLbl";
             this.eightKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.eightKeyLbl.TabIndex = 57;
@@ -337,7 +350,7 @@ namespace KeyTyper
             this.lControlKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lControlKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.lControlKeyLbl.Key = System.Windows.Forms.Keys.LControlKey;
-            this.lControlKeyLbl.Location = new System.Drawing.Point(41, 442);
+            this.lControlKeyLbl.Location = new System.Drawing.Point(38, 459);
             this.lControlKeyLbl.Name = "lControlKeyLbl";
             this.lControlKeyLbl.Size = new System.Drawing.Size(118, 48);
             this.lControlKeyLbl.TabIndex = 104;
@@ -350,7 +363,7 @@ namespace KeyTyper
             this.ThreeKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ThreeKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.ThreeKeyLbl.Key = System.Windows.Forms.Keys.D3;
-            this.ThreeKeyLbl.Location = new System.Drawing.Point(197, 213);
+            this.ThreeKeyLbl.Location = new System.Drawing.Point(194, 230);
             this.ThreeKeyLbl.Name = "ThreeKeyLbl";
             this.ThreeKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.ThreeKeyLbl.TabIndex = 57;
@@ -362,7 +375,7 @@ namespace KeyTyper
             this.spaceKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.spaceKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.spaceKeyLbl.Key = System.Windows.Forms.Keys.Space;
-            this.spaceKeyLbl.Location = new System.Drawing.Point(273, 442);
+            this.spaceKeyLbl.Location = new System.Drawing.Point(270, 459);
             this.spaceKeyLbl.Name = "spaceKeyLbl";
             this.spaceKeyLbl.Size = new System.Drawing.Size(382, 48);
             this.spaceKeyLbl.TabIndex = 103;
@@ -375,7 +388,7 @@ namespace KeyTyper
             this.sevenKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sevenKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.sevenKeyLbl.Key = System.Windows.Forms.Keys.D7;
-            this.sevenKeyLbl.Location = new System.Drawing.Point(405, 213);
+            this.sevenKeyLbl.Location = new System.Drawing.Point(402, 230);
             this.sevenKeyLbl.Name = "sevenKeyLbl";
             this.sevenKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.sevenKeyLbl.TabIndex = 58;
@@ -387,7 +400,7 @@ namespace KeyTyper
             this.rShiftKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rShiftKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.rShiftKeyLbl.Key = System.Windows.Forms.Keys.RShiftKey;
-            this.rShiftKeyLbl.Location = new System.Drawing.Point(717, 385);
+            this.rShiftKeyLbl.Location = new System.Drawing.Point(714, 402);
             this.rShiftKeyLbl.Name = "rShiftKeyLbl";
             this.rShiftKeyLbl.Size = new System.Drawing.Size(166, 48);
             this.rShiftKeyLbl.TabIndex = 102;
@@ -400,7 +413,7 @@ namespace KeyTyper
             this.fourKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fourKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.fourKeyLbl.Key = System.Windows.Forms.Keys.D4;
-            this.fourKeyLbl.Location = new System.Drawing.Point(249, 213);
+            this.fourKeyLbl.Location = new System.Drawing.Point(246, 230);
             this.fourKeyLbl.Name = "fourKeyLbl";
             this.fourKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.fourKeyLbl.TabIndex = 58;
@@ -412,7 +425,7 @@ namespace KeyTyper
             this.backslashKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.backslashKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.backslashKeyLbl.Key = System.Windows.Forms.Keys.OemQuestion;
-            this.backslashKeyLbl.Location = new System.Drawing.Point(657, 385);
+            this.backslashKeyLbl.Location = new System.Drawing.Point(654, 402);
             this.backslashKeyLbl.Name = "backslashKeyLbl";
             this.backslashKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.backslashKeyLbl.TabIndex = 101;
@@ -424,7 +437,7 @@ namespace KeyTyper
             this.sixKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sixKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.sixKeyLbl.Key = System.Windows.Forms.Keys.D6;
-            this.sixKeyLbl.Location = new System.Drawing.Point(353, 213);
+            this.sixKeyLbl.Location = new System.Drawing.Point(350, 230);
             this.sixKeyLbl.Name = "sixKeyLbl";
             this.sixKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.sixKeyLbl.TabIndex = 58;
@@ -436,7 +449,7 @@ namespace KeyTyper
             this.periodKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.periodKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.periodKeyLbl.Key = System.Windows.Forms.Keys.OemPeriod;
-            this.periodKeyLbl.Location = new System.Drawing.Point(605, 385);
+            this.periodKeyLbl.Location = new System.Drawing.Point(602, 402);
             this.periodKeyLbl.Name = "periodKeyLbl";
             this.periodKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.periodKeyLbl.TabIndex = 100;
@@ -448,7 +461,7 @@ namespace KeyTyper
             this.fiveKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fiveKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.fiveKeyLbl.Key = System.Windows.Forms.Keys.D5;
-            this.fiveKeyLbl.Location = new System.Drawing.Point(301, 213);
+            this.fiveKeyLbl.Location = new System.Drawing.Point(298, 230);
             this.fiveKeyLbl.Name = "fiveKeyLbl";
             this.fiveKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.fiveKeyLbl.TabIndex = 58;
@@ -460,7 +473,7 @@ namespace KeyTyper
             this.commaKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.commaKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.commaKeyLbl.Key = System.Windows.Forms.Keys.Oemcomma;
-            this.commaKeyLbl.Location = new System.Drawing.Point(553, 385);
+            this.commaKeyLbl.Location = new System.Drawing.Point(550, 402);
             this.commaKeyLbl.Name = "commaKeyLbl";
             this.commaKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.commaKeyLbl.TabIndex = 99;
@@ -472,7 +485,7 @@ namespace KeyTyper
             this.nineKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nineKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.nineKeyLbl.Key = System.Windows.Forms.Keys.D9;
-            this.nineKeyLbl.Location = new System.Drawing.Point(509, 213);
+            this.nineKeyLbl.Location = new System.Drawing.Point(506, 230);
             this.nineKeyLbl.Name = "nineKeyLbl";
             this.nineKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.nineKeyLbl.TabIndex = 59;
@@ -484,7 +497,7 @@ namespace KeyTyper
             this.mKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.mKeyLbl.Key = System.Windows.Forms.Keys.M;
-            this.mKeyLbl.Location = new System.Drawing.Point(501, 385);
+            this.mKeyLbl.Location = new System.Drawing.Point(498, 402);
             this.mKeyLbl.Name = "mKeyLbl";
             this.mKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.mKeyLbl.TabIndex = 98;
@@ -496,7 +509,7 @@ namespace KeyTyper
             this.zeroKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.zeroKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.zeroKeyLbl.Key = System.Windows.Forms.Keys.D0;
-            this.zeroKeyLbl.Location = new System.Drawing.Point(561, 213);
+            this.zeroKeyLbl.Location = new System.Drawing.Point(558, 230);
             this.zeroKeyLbl.Name = "zeroKeyLbl";
             this.zeroKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.zeroKeyLbl.TabIndex = 60;
@@ -508,7 +521,7 @@ namespace KeyTyper
             this.nKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.nKeyLbl.Key = System.Windows.Forms.Keys.N;
-            this.nKeyLbl.Location = new System.Drawing.Point(449, 385);
+            this.nKeyLbl.Location = new System.Drawing.Point(446, 402);
             this.nKeyLbl.Name = "nKeyLbl";
             this.nKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.nKeyLbl.TabIndex = 97;
@@ -520,7 +533,7 @@ namespace KeyTyper
             this.minusKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.minusKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.minusKeyLbl.Key = System.Windows.Forms.Keys.OemMinus;
-            this.minusKeyLbl.Location = new System.Drawing.Point(613, 213);
+            this.minusKeyLbl.Location = new System.Drawing.Point(610, 230);
             this.minusKeyLbl.Name = "minusKeyLbl";
             this.minusKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.minusKeyLbl.TabIndex = 61;
@@ -532,7 +545,7 @@ namespace KeyTyper
             this.bKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.bKeyLbl.Key = System.Windows.Forms.Keys.B;
-            this.bKeyLbl.Location = new System.Drawing.Point(397, 385);
+            this.bKeyLbl.Location = new System.Drawing.Point(394, 402);
             this.bKeyLbl.Name = "bKeyLbl";
             this.bKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.bKeyLbl.TabIndex = 96;
@@ -544,7 +557,7 @@ namespace KeyTyper
             this.plusKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.plusKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.plusKeyLbl.Key = System.Windows.Forms.Keys.Oemplus;
-            this.plusKeyLbl.Location = new System.Drawing.Point(665, 213);
+            this.plusKeyLbl.Location = new System.Drawing.Point(662, 230);
             this.plusKeyLbl.Name = "plusKeyLbl";
             this.plusKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.plusKeyLbl.TabIndex = 62;
@@ -556,7 +569,7 @@ namespace KeyTyper
             this.vKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.vKeyLbl.Key = System.Windows.Forms.Keys.V;
-            this.vKeyLbl.Location = new System.Drawing.Point(345, 385);
+            this.vKeyLbl.Location = new System.Drawing.Point(342, 402);
             this.vKeyLbl.Name = "vKeyLbl";
             this.vKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.vKeyLbl.TabIndex = 95;
@@ -568,7 +581,7 @@ namespace KeyTyper
             this.tildeKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tildeKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.tildeKeyLbl.Key = System.Windows.Forms.Keys.Oemtilde;
-            this.tildeKeyLbl.Location = new System.Drawing.Point(41, 213);
+            this.tildeKeyLbl.Location = new System.Drawing.Point(38, 230);
             this.tildeKeyLbl.Name = "tildeKeyLbl";
             this.tildeKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.tildeKeyLbl.TabIndex = 63;
@@ -581,7 +594,7 @@ namespace KeyTyper
             this.cKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.cKeyLbl.Key = System.Windows.Forms.Keys.C;
-            this.cKeyLbl.Location = new System.Drawing.Point(293, 385);
+            this.cKeyLbl.Location = new System.Drawing.Point(290, 402);
             this.cKeyLbl.Name = "cKeyLbl";
             this.cKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.cKeyLbl.TabIndex = 94;
@@ -593,7 +606,7 @@ namespace KeyTyper
             this.tabKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.tabKeyLbl.Key = System.Windows.Forms.Keys.Tab;
-            this.tabKeyLbl.Location = new System.Drawing.Point(41, 270);
+            this.tabKeyLbl.Location = new System.Drawing.Point(38, 287);
             this.tabKeyLbl.Name = "tabKeyLbl";
             this.tabKeyLbl.Size = new System.Drawing.Size(94, 48);
             this.tabKeyLbl.TabIndex = 64;
@@ -606,7 +619,7 @@ namespace KeyTyper
             this.xKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.xKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.xKeyLbl.Key = System.Windows.Forms.Keys.X;
-            this.xKeyLbl.Location = new System.Drawing.Point(241, 385);
+            this.xKeyLbl.Location = new System.Drawing.Point(238, 402);
             this.xKeyLbl.Name = "xKeyLbl";
             this.xKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.xKeyLbl.TabIndex = 93;
@@ -618,7 +631,7 @@ namespace KeyTyper
             this.wKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.wKeyLbl.Key = System.Windows.Forms.Keys.W;
-            this.wKeyLbl.Location = new System.Drawing.Point(193, 270);
+            this.wKeyLbl.Location = new System.Drawing.Point(190, 287);
             this.wKeyLbl.Name = "wKeyLbl";
             this.wKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.wKeyLbl.TabIndex = 65;
@@ -630,7 +643,7 @@ namespace KeyTyper
             this.zKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.zKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.zKeyLbl.Key = System.Windows.Forms.Keys.Z;
-            this.zKeyLbl.Location = new System.Drawing.Point(189, 385);
+            this.zKeyLbl.Location = new System.Drawing.Point(186, 402);
             this.zKeyLbl.Name = "zKeyLbl";
             this.zKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.zKeyLbl.TabIndex = 92;
@@ -642,7 +655,7 @@ namespace KeyTyper
             this.qKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.qKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.qKeyLbl.Key = System.Windows.Forms.Keys.Q;
-            this.qKeyLbl.Location = new System.Drawing.Point(141, 270);
+            this.qKeyLbl.Location = new System.Drawing.Point(138, 287);
             this.qKeyLbl.Name = "qKeyLbl";
             this.qKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.qKeyLbl.TabIndex = 66;
@@ -654,7 +667,7 @@ namespace KeyTyper
             this.lShiftKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lShiftKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.lShiftKeyLbl.Key = System.Windows.Forms.Keys.LShiftKey;
-            this.lShiftKeyLbl.Location = new System.Drawing.Point(41, 385);
+            this.lShiftKeyLbl.Location = new System.Drawing.Point(38, 402);
             this.lShiftKeyLbl.Name = "lShiftKeyLbl";
             this.lShiftKeyLbl.Size = new System.Drawing.Size(142, 48);
             this.lShiftKeyLbl.TabIndex = 91;
@@ -667,7 +680,7 @@ namespace KeyTyper
             this.eKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.eKeyLbl.Key = System.Windows.Forms.Keys.E;
-            this.eKeyLbl.Location = new System.Drawing.Point(245, 270);
+            this.eKeyLbl.Location = new System.Drawing.Point(242, 287);
             this.eKeyLbl.Name = "eKeyLbl";
             this.eKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.eKeyLbl.TabIndex = 67;
@@ -679,7 +692,7 @@ namespace KeyTyper
             this.forwardKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.forwardKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.forwardKeyLbl.Key = System.Windows.Forms.Keys.Oem5;
-            this.forwardKeyLbl.Location = new System.Drawing.Point(765, 270);
+            this.forwardKeyLbl.Location = new System.Drawing.Point(762, 287);
             this.forwardKeyLbl.Name = "forwardKeyLbl";
             this.forwardKeyLbl.Size = new System.Drawing.Size(118, 48);
             this.forwardKeyLbl.TabIndex = 90;
@@ -691,7 +704,7 @@ namespace KeyTyper
             this.rKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.rKeyLbl.Key = System.Windows.Forms.Keys.R;
-            this.rKeyLbl.Location = new System.Drawing.Point(297, 270);
+            this.rKeyLbl.Location = new System.Drawing.Point(294, 287);
             this.rKeyLbl.Name = "rKeyLbl";
             this.rKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.rKeyLbl.TabIndex = 68;
@@ -703,7 +716,7 @@ namespace KeyTyper
             this.apostropheKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.apostropheKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.apostropheKeyLbl.Key = System.Windows.Forms.Keys.Oem7;
-            this.apostropheKeyLbl.Location = new System.Drawing.Point(685, 326);
+            this.apostropheKeyLbl.Location = new System.Drawing.Point(682, 343);
             this.apostropheKeyLbl.Name = "apostropheKeyLbl";
             this.apostropheKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.apostropheKeyLbl.TabIndex = 89;
@@ -715,7 +728,7 @@ namespace KeyTyper
             this.tKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.tKeyLbl.Key = System.Windows.Forms.Keys.T;
-            this.tKeyLbl.Location = new System.Drawing.Point(349, 270);
+            this.tKeyLbl.Location = new System.Drawing.Point(346, 287);
             this.tKeyLbl.Name = "tKeyLbl";
             this.tKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.tKeyLbl.TabIndex = 69;
@@ -727,7 +740,7 @@ namespace KeyTyper
             this.simiKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.simiKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.simiKeyLbl.Key = System.Windows.Forms.Keys.Oem1;
-            this.simiKeyLbl.Location = new System.Drawing.Point(633, 326);
+            this.simiKeyLbl.Location = new System.Drawing.Point(630, 343);
             this.simiKeyLbl.Name = "simiKeyLbl";
             this.simiKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.simiKeyLbl.TabIndex = 88;
@@ -739,7 +752,7 @@ namespace KeyTyper
             this.ykeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ykeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.ykeyLbl.Key = System.Windows.Forms.Keys.Y;
-            this.ykeyLbl.Location = new System.Drawing.Point(401, 270);
+            this.ykeyLbl.Location = new System.Drawing.Point(398, 287);
             this.ykeyLbl.Name = "ykeyLbl";
             this.ykeyLbl.Size = new System.Drawing.Size(46, 48);
             this.ykeyLbl.TabIndex = 70;
@@ -751,7 +764,7 @@ namespace KeyTyper
             this.lKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.lKeyLbl.Key = System.Windows.Forms.Keys.L;
-            this.lKeyLbl.Location = new System.Drawing.Point(581, 326);
+            this.lKeyLbl.Location = new System.Drawing.Point(578, 343);
             this.lKeyLbl.Name = "lKeyLbl";
             this.lKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.lKeyLbl.TabIndex = 87;
@@ -763,7 +776,7 @@ namespace KeyTyper
             this.uKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.uKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.uKeyLbl.Key = System.Windows.Forms.Keys.U;
-            this.uKeyLbl.Location = new System.Drawing.Point(453, 270);
+            this.uKeyLbl.Location = new System.Drawing.Point(450, 287);
             this.uKeyLbl.Name = "uKeyLbl";
             this.uKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.uKeyLbl.TabIndex = 71;
@@ -775,7 +788,7 @@ namespace KeyTyper
             this.kKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.kKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.kKeyLbl.Key = System.Windows.Forms.Keys.K;
-            this.kKeyLbl.Location = new System.Drawing.Point(529, 326);
+            this.kKeyLbl.Location = new System.Drawing.Point(526, 343);
             this.kKeyLbl.Name = "kKeyLbl";
             this.kKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.kKeyLbl.TabIndex = 86;
@@ -787,7 +800,7 @@ namespace KeyTyper
             this.IKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.IKeyLbl.Key = System.Windows.Forms.Keys.I;
-            this.IKeyLbl.Location = new System.Drawing.Point(505, 270);
+            this.IKeyLbl.Location = new System.Drawing.Point(502, 287);
             this.IKeyLbl.Name = "IKeyLbl";
             this.IKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.IKeyLbl.TabIndex = 72;
@@ -799,7 +812,7 @@ namespace KeyTyper
             this.jKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.jKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.jKeyLbl.Key = System.Windows.Forms.Keys.J;
-            this.jKeyLbl.Location = new System.Drawing.Point(477, 326);
+            this.jKeyLbl.Location = new System.Drawing.Point(474, 343);
             this.jKeyLbl.Name = "jKeyLbl";
             this.jKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.jKeyLbl.TabIndex = 85;
@@ -811,7 +824,7 @@ namespace KeyTyper
             this.oKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.oKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.oKeyLbl.Key = System.Windows.Forms.Keys.O;
-            this.oKeyLbl.Location = new System.Drawing.Point(557, 270);
+            this.oKeyLbl.Location = new System.Drawing.Point(554, 287);
             this.oKeyLbl.Name = "oKeyLbl";
             this.oKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.oKeyLbl.TabIndex = 73;
@@ -823,7 +836,7 @@ namespace KeyTyper
             this.hKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.hKeyLbl.Key = System.Windows.Forms.Keys.H;
-            this.hKeyLbl.Location = new System.Drawing.Point(425, 326);
+            this.hKeyLbl.Location = new System.Drawing.Point(422, 343);
             this.hKeyLbl.Name = "hKeyLbl";
             this.hKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.hKeyLbl.TabIndex = 84;
@@ -835,7 +848,7 @@ namespace KeyTyper
             this.pKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.pKeyLbl.Key = System.Windows.Forms.Keys.P;
-            this.pKeyLbl.Location = new System.Drawing.Point(609, 270);
+            this.pKeyLbl.Location = new System.Drawing.Point(606, 287);
             this.pKeyLbl.Name = "pKeyLbl";
             this.pKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.pKeyLbl.TabIndex = 74;
@@ -847,7 +860,7 @@ namespace KeyTyper
             this.gKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.gKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.gKeyLbl.Key = System.Windows.Forms.Keys.G;
-            this.gKeyLbl.Location = new System.Drawing.Point(373, 326);
+            this.gKeyLbl.Location = new System.Drawing.Point(370, 343);
             this.gKeyLbl.Name = "gKeyLbl";
             this.gKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.gKeyLbl.TabIndex = 83;
@@ -859,7 +872,7 @@ namespace KeyTyper
             this.openKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.openKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.openKeyLbl.Key = System.Windows.Forms.Keys.OemOpenBrackets;
-            this.openKeyLbl.Location = new System.Drawing.Point(661, 270);
+            this.openKeyLbl.Location = new System.Drawing.Point(658, 287);
             this.openKeyLbl.Name = "openKeyLbl";
             this.openKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.openKeyLbl.TabIndex = 75;
@@ -871,7 +884,7 @@ namespace KeyTyper
             this.fKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.fKeyLbl.Key = System.Windows.Forms.Keys.F;
-            this.fKeyLbl.Location = new System.Drawing.Point(321, 326);
+            this.fKeyLbl.Location = new System.Drawing.Point(318, 343);
             this.fKeyLbl.Name = "fKeyLbl";
             this.fKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.fKeyLbl.TabIndex = 82;
@@ -883,7 +896,7 @@ namespace KeyTyper
             this.closeKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.closeKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.closeKeyLbl.Key = System.Windows.Forms.Keys.Oem6;
-            this.closeKeyLbl.Location = new System.Drawing.Point(713, 270);
+            this.closeKeyLbl.Location = new System.Drawing.Point(710, 287);
             this.closeKeyLbl.Name = "closeKeyLbl";
             this.closeKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.closeKeyLbl.TabIndex = 76;
@@ -895,7 +908,7 @@ namespace KeyTyper
             this.dKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.dKeyLbl.Key = System.Windows.Forms.Keys.D;
-            this.dKeyLbl.Location = new System.Drawing.Point(269, 326);
+            this.dKeyLbl.Location = new System.Drawing.Point(266, 343);
             this.dKeyLbl.Name = "dKeyLbl";
             this.dKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.dKeyLbl.TabIndex = 81;
@@ -907,7 +920,7 @@ namespace KeyTyper
             this.enterKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.enterKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.enterKeyLbl.Key = System.Windows.Forms.Keys.Return;
-            this.enterKeyLbl.Location = new System.Drawing.Point(741, 326);
+            this.enterKeyLbl.Location = new System.Drawing.Point(738, 343);
             this.enterKeyLbl.Name = "enterKeyLbl";
             this.enterKeyLbl.Size = new System.Drawing.Size(142, 48);
             this.enterKeyLbl.TabIndex = 77;
@@ -920,7 +933,7 @@ namespace KeyTyper
             this.sKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.sKeyLbl.Key = System.Windows.Forms.Keys.S;
-            this.sKeyLbl.Location = new System.Drawing.Point(217, 326);
+            this.sKeyLbl.Location = new System.Drawing.Point(214, 343);
             this.sKeyLbl.Name = "sKeyLbl";
             this.sKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.sKeyLbl.TabIndex = 80;
@@ -932,7 +945,7 @@ namespace KeyTyper
             this.capsKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.capsKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.capsKeyLbl.Key = System.Windows.Forms.Keys.Capital;
-            this.capsKeyLbl.Location = new System.Drawing.Point(41, 326);
+            this.capsKeyLbl.Location = new System.Drawing.Point(38, 343);
             this.capsKeyLbl.Name = "capsKeyLbl";
             this.capsKeyLbl.Size = new System.Drawing.Size(118, 48);
             this.capsKeyLbl.TabIndex = 78;
@@ -945,7 +958,7 @@ namespace KeyTyper
             this.aKeyLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.aKeyLbl.Font = new System.Drawing.Font("Courier New", 30F, System.Drawing.FontStyle.Bold);
             this.aKeyLbl.Key = System.Windows.Forms.Keys.A;
-            this.aKeyLbl.Location = new System.Drawing.Point(165, 326);
+            this.aKeyLbl.Location = new System.Drawing.Point(162, 343);
             this.aKeyLbl.Name = "aKeyLbl";
             this.aKeyLbl.Size = new System.Drawing.Size(46, 48);
             this.aKeyLbl.TabIndex = 79;
@@ -964,6 +977,7 @@ namespace KeyTyper
             this.Text = "KeyTyper";
             this.gradientGroup1.ResumeLayout(false);
             this.gradientGroup1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1035,6 +1049,7 @@ namespace KeyTyper
         private System.Windows.Forms.Button LevelTwoBtn;
         private System.Windows.Forms.Button levelOneBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
