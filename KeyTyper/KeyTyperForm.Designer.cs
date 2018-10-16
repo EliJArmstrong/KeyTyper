@@ -31,14 +31,14 @@ namespace KeyTyper
         private void InitializeComponent()
         {
             this.gradientGroup1 = new KeyTyper.GradientGroup();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.upArrowImg = new System.Windows.Forms.PictureBox();
+            this.infoLbl = new System.Windows.Forms.Label();
             this.levelThreeBtn = new System.Windows.Forms.Button();
             this.LevelTwoBtn = new System.Windows.Forms.Button();
             this.levelOneBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.selectedTextBox = new System.Windows.Forms.TextBox();
             this.backKeyLbl = new KeyTyper.LabelExt();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.userInputBox = new System.Windows.Forms.RichTextBox();
             this.rControlKeyLbl = new KeyTyper.LabelExt();
             this.oneKeyLbl = new KeyTyper.LabelExt();
             this.rAltKeyLbl = new KeyTyper.LabelExt();
@@ -97,7 +97,7 @@ namespace KeyTyper
             this.capsKeyLbl = new KeyTyper.LabelExt();
             this.aKeyLbl = new KeyTyper.LabelExt();
             this.gradientGroup1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upArrowImg)).BeginInit();
             this.SuspendLayout();
             // 
             // gradientGroup1
@@ -105,14 +105,14 @@ namespace KeyTyper
             this.gradientGroup1.BackColor = System.Drawing.SystemColors.Control;
             this.gradientGroup1.ColorBottom = System.Drawing.Color.Navy;
             this.gradientGroup1.ColorTop = System.Drawing.Color.Teal;
-            this.gradientGroup1.Controls.Add(this.pictureBox1);
-            this.gradientGroup1.Controls.Add(this.label1);
+            this.gradientGroup1.Controls.Add(this.upArrowImg);
+            this.gradientGroup1.Controls.Add(this.infoLbl);
             this.gradientGroup1.Controls.Add(this.levelThreeBtn);
             this.gradientGroup1.Controls.Add(this.LevelTwoBtn);
             this.gradientGroup1.Controls.Add(this.levelOneBtn);
-            this.gradientGroup1.Controls.Add(this.textBox1);
+            this.gradientGroup1.Controls.Add(this.selectedTextBox);
             this.gradientGroup1.Controls.Add(this.backKeyLbl);
-            this.gradientGroup1.Controls.Add(this.richTextBox1);
+            this.gradientGroup1.Controls.Add(this.userInputBox);
             this.gradientGroup1.Controls.Add(this.rControlKeyLbl);
             this.gradientGroup1.Controls.Add(this.oneKeyLbl);
             this.gradientGroup1.Controls.Add(this.rAltKeyLbl);
@@ -176,67 +176,67 @@ namespace KeyTyper
             this.gradientGroup1.TabIndex = 108;
             this.gradientGroup1.TabStop = false;
             // 
-            // pictureBox1
+            // upArrowImg
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::KeyTyper.Properties.Resources.coolArrowUP;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 114;
-            this.pictureBox1.TabStop = false;
+            this.upArrowImg.BackColor = System.Drawing.Color.Transparent;
+            this.upArrowImg.Image = global::KeyTyper.Properties.Resources.coolArrowUP;
+            this.upArrowImg.Location = new System.Drawing.Point(9, 70);
+            this.upArrowImg.Name = "upArrowImg";
+            this.upArrowImg.Size = new System.Drawing.Size(32, 50);
+            this.upArrowImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.upArrowImg.TabIndex = 114;
+            this.upArrowImg.TabStop = false;
             // 
-            // label1
+            // infoLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(44, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 50);
-            this.label1.TabIndex = 113;
-            this.label1.Text = "Type this character \r\nor space.";
+            this.infoLbl.AutoSize = true;
+            this.infoLbl.BackColor = System.Drawing.Color.Transparent;
+            this.infoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoLbl.ForeColor = System.Drawing.Color.White;
+            this.infoLbl.Location = new System.Drawing.Point(44, 67);
+            this.infoLbl.Name = "infoLbl";
+            this.infoLbl.Size = new System.Drawing.Size(202, 50);
+            this.infoLbl.TabIndex = 113;
+            this.infoLbl.Text = "Type this character \r\nor space.";
             // 
             // levelThreeBtn
             // 
             this.levelThreeBtn.Location = new System.Drawing.Point(532, 97);
             this.levelThreeBtn.Name = "levelThreeBtn";
             this.levelThreeBtn.Size = new System.Drawing.Size(75, 23);
-            this.levelThreeBtn.TabIndex = 111;
+            this.levelThreeBtn.TabIndex = 2;
             this.levelThreeBtn.Text = "Level 3";
             this.levelThreeBtn.UseVisualStyleBackColor = true;
-            this.levelThreeBtn.Click += new System.EventHandler(this.levelThreeBtn_Click);
+            this.levelThreeBtn.Click += new System.EventHandler(this.LevelBtn_Click);
             // 
             // LevelTwoBtn
             // 
             this.LevelTwoBtn.Location = new System.Drawing.Point(411, 97);
             this.LevelTwoBtn.Name = "LevelTwoBtn";
             this.LevelTwoBtn.Size = new System.Drawing.Size(75, 23);
-            this.LevelTwoBtn.TabIndex = 110;
+            this.LevelTwoBtn.TabIndex = 1;
             this.LevelTwoBtn.Text = "Level 2";
             this.LevelTwoBtn.UseVisualStyleBackColor = true;
-            this.LevelTwoBtn.Click += new System.EventHandler(this.LevelTwoBtn_Click);
+            this.LevelTwoBtn.Click += new System.EventHandler(this.LevelBtn_Click);
             // 
             // levelOneBtn
             // 
             this.levelOneBtn.Location = new System.Drawing.Point(292, 97);
             this.levelOneBtn.Name = "levelOneBtn";
             this.levelOneBtn.Size = new System.Drawing.Size(75, 23);
-            this.levelOneBtn.TabIndex = 109;
+            this.levelOneBtn.TabIndex = 0;
             this.levelOneBtn.Text = "Level 1";
             this.levelOneBtn.UseVisualStyleBackColor = true;
-            this.levelOneBtn.Click += new System.EventHandler(this.levelOneBtn_Click);
+            this.levelOneBtn.Click += new System.EventHandler(this.LevelBtn_Click);
             // 
-            // textBox1
+            // selectedTextBox
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.textBox1.Location = new System.Drawing.Point(14, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(896, 44);
-            this.textBox1.TabIndex = 108;
+            this.selectedTextBox.Enabled = false;
+            this.selectedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.selectedTextBox.Location = new System.Drawing.Point(14, 20);
+            this.selectedTextBox.Name = "selectedTextBox";
+            this.selectedTextBox.Size = new System.Drawing.Size(896, 44);
+            this.selectedTextBox.TabIndex = 108;
             // 
             // backKeyLbl
             // 
@@ -251,23 +251,23 @@ namespace KeyTyper
             this.backKeyLbl.Text = " Back \r\n";
             this.backKeyLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // richTextBox1
+            // userInputBox
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userInputBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(12, 133);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.richTextBox1.Size = new System.Drawing.Size(899, 78);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.TabStop = false;
-            this.richTextBox1.Text = "                                Select a level to start";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
-            this.richTextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyUp);
+            this.userInputBox.BackColor = System.Drawing.SystemColors.Info;
+            this.userInputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userInputBox.Location = new System.Drawing.Point(12, 133);
+            this.userInputBox.Margin = new System.Windows.Forms.Padding(2);
+            this.userInputBox.Name = "userInputBox";
+            this.userInputBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.userInputBox.Size = new System.Drawing.Size(899, 78);
+            this.userInputBox.TabIndex = 0;
+            this.userInputBox.TabStop = false;
+            this.userInputBox.Text = "                                Select a level to start";
+            this.userInputBox.TextChanged += new System.EventHandler(this.UserInputBox_TextChanged);
+            this.userInputBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UserInputBox_KeyDown);
+            this.userInputBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.UserInputBox_KeyUp);
             // 
             // rControlKeyLbl
             // 
@@ -977,7 +977,7 @@ namespace KeyTyper
             this.Text = "KeyTyper";
             this.gradientGroup1.ResumeLayout(false);
             this.gradientGroup1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upArrowImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1039,17 +1039,17 @@ namespace KeyTyper
         private LabelExt oneKeyLbl;
         private LabelExt rAltKeyLbl;
         private LabelExt backKeyLbl;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox userInputBox;
         private LabelExt nineKeyLbl;
         private LabelExt forwardKeyLbl;
         private LabelExt rControlKeyLbl;
         private GradientGroup gradientGroup1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox selectedTextBox;
         private System.Windows.Forms.Button levelThreeBtn;
         private System.Windows.Forms.Button LevelTwoBtn;
         private System.Windows.Forms.Button levelOneBtn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label infoLbl;
+        private System.Windows.Forms.PictureBox upArrowImg;
     }
 }
 

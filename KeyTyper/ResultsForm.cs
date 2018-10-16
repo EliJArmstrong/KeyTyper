@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace KeyTyper
 {
-    public partial class Form2 : Form
+    public partial class ResultsForm : Form
     {
-        public Form2()
+        public ResultsForm()
         {
             InitializeComponent();
         }
