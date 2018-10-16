@@ -31,6 +31,11 @@ namespace KeyTyper
         private void InitializeComponent()
         {
             this.gradientGroup1 = new KeyTyper.GradientGroup();
+            this.label1 = new System.Windows.Forms.Label();
+            this.levelThreeBtn = new System.Windows.Forms.Button();
+            this.LevelTwoBtn = new System.Windows.Forms.Button();
+            this.levelOneBtn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.backKeyLbl = new KeyTyper.LabelExt();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.rControlKeyLbl = new KeyTyper.LabelExt();
@@ -95,8 +100,14 @@ namespace KeyTyper
             // 
             // gradientGroup1
             // 
+            this.gradientGroup1.BackColor = System.Drawing.SystemColors.Control;
             this.gradientGroup1.ColorBottom = System.Drawing.Color.Navy;
             this.gradientGroup1.ColorTop = System.Drawing.Color.Teal;
+            this.gradientGroup1.Controls.Add(this.label1);
+            this.gradientGroup1.Controls.Add(this.levelThreeBtn);
+            this.gradientGroup1.Controls.Add(this.LevelTwoBtn);
+            this.gradientGroup1.Controls.Add(this.levelOneBtn);
+            this.gradientGroup1.Controls.Add(this.textBox1);
             this.gradientGroup1.Controls.Add(this.backKeyLbl);
             this.gradientGroup1.Controls.Add(this.richTextBox1);
             this.gradientGroup1.Controls.Add(this.rControlKeyLbl);
@@ -162,6 +173,58 @@ namespace KeyTyper
             this.gradientGroup1.TabIndex = 108;
             this.gradientGroup1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(41, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 50);
+            this.label1.TabIndex = 113;
+            this.label1.Text = "Type this character \r\nor space.";
+            // 
+            // levelThreeBtn
+            // 
+            this.levelThreeBtn.Location = new System.Drawing.Point(532, 70);
+            this.levelThreeBtn.Name = "levelThreeBtn";
+            this.levelThreeBtn.Size = new System.Drawing.Size(75, 23);
+            this.levelThreeBtn.TabIndex = 111;
+            this.levelThreeBtn.Text = "Level 3";
+            this.levelThreeBtn.UseVisualStyleBackColor = true;
+            this.levelThreeBtn.Click += new System.EventHandler(this.levelThreeBtn_Click);
+            // 
+            // LevelTwoBtn
+            // 
+            this.LevelTwoBtn.Location = new System.Drawing.Point(411, 70);
+            this.LevelTwoBtn.Name = "LevelTwoBtn";
+            this.LevelTwoBtn.Size = new System.Drawing.Size(75, 23);
+            this.LevelTwoBtn.TabIndex = 110;
+            this.LevelTwoBtn.Text = "Level 2";
+            this.LevelTwoBtn.UseVisualStyleBackColor = true;
+            this.LevelTwoBtn.Click += new System.EventHandler(this.LevelTwoBtn_Click);
+            // 
+            // levelOneBtn
+            // 
+            this.levelOneBtn.Location = new System.Drawing.Point(292, 70);
+            this.levelOneBtn.Name = "levelOneBtn";
+            this.levelOneBtn.Size = new System.Drawing.Size(75, 23);
+            this.levelOneBtn.TabIndex = 109;
+            this.levelOneBtn.Text = "Level 1";
+            this.levelOneBtn.UseVisualStyleBackColor = true;
+            this.levelOneBtn.Click += new System.EventHandler(this.levelOneBtn_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.textBox1.Location = new System.Drawing.Point(14, 20);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(896, 44);
+            this.textBox1.TabIndex = 108;
+            this.textBox1.Text = "Test texts";
+            // 
             // backKeyLbl
             // 
             this.backKeyLbl.AutoSize = true;
@@ -181,14 +244,14 @@ namespace KeyTyper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Info;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(13, 17);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 133);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.richTextBox1.Size = new System.Drawing.Size(899, 157);
-            this.richTextBox1.TabIndex = 39;
+            this.richTextBox1.Size = new System.Drawing.Size(899, 78);
+            this.richTextBox1.TabIndex = 0;
             this.richTextBox1.TabStop = false;
-            this.richTextBox1.Text = "The quick brown fox jumped over a lazy dog.";
+            this.richTextBox1.Text = "\n                               Select the level to start";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
             this.richTextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyUp);
@@ -967,6 +1030,11 @@ namespace KeyTyper
         private LabelExt forwardKeyLbl;
         private LabelExt rControlKeyLbl;
         private GradientGroup gradientGroup1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button levelThreeBtn;
+        private System.Windows.Forms.Button LevelTwoBtn;
+        private System.Windows.Forms.Button levelOneBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
 
