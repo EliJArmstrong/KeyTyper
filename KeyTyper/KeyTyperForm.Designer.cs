@@ -176,11 +176,11 @@ namespace KeyTyper
             // 
             // addPhraseBtn
             // 
-            this.addPhraseBtn.Location = new System.Drawing.Point(738, 71);
+            this.addPhraseBtn.Location = new System.Drawing.Point(783, 71);
             this.addPhraseBtn.Name = "addPhraseBtn";
-            this.addPhraseBtn.Size = new System.Drawing.Size(163, 23);
+            this.addPhraseBtn.Size = new System.Drawing.Size(118, 35);
             this.addPhraseBtn.TabIndex = 198;
-            this.addPhraseBtn.Text = "Add Your Own Text Phrase";
+            this.addPhraseBtn.Text = "Click Here to Add Your Own Phrase";
             this.addPhraseBtn.UseVisualStyleBackColor = true;
             this.addPhraseBtn.Click += new System.EventHandler(this.AddPhraseBtn_Click);
             // 

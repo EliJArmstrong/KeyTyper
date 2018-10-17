@@ -262,7 +262,8 @@ namespace KeyTyper
                         if (!trimmedString.Equals(""))
                         {
                             typePhrases.Add(trimmedString);
-                            levelSelector.Items.Add($"      Custom Level {i+1}");
+                            levelSelector.Items.Add($"      Custom Level " +
+                                $"{i+1}");
                         }
                     }
                 }

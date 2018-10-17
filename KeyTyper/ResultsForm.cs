@@ -69,7 +69,7 @@ namespace KeyTyper
 
         /// -------------------------------------------------------------------
         /// <summary>
-        /// This method sender is a button that closes the form
+        /// This method's sender is a button that closes the form
         /// </summary>
         /// <param name="sender">The sender that called the method.</param>
         /// <param name="e">The event argument object</param>
