@@ -46,40 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddPhraseForm.cs">
+    <Compile Include="Controller\AddPhraseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPhraseForm.Designer.cs">
+    <Compile Include="Controller\AddPhraseForm.Designer.cs">
       <DependentUpon>AddPhraseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PointTracker.cs" />
-    <Compile Include="ResultsForm.cs">
+    <Compile Include="Model\PointTracker.cs" />
+    <Compile Include="Controller\ResultsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResultsForm.Designer.cs">
+    <Compile Include="Controller\ResultsForm.Designer.cs">
       <DependentUpon>ResultsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GradientGroup.cs">
+    <Compile Include="View\GradientGroup.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="KeyTyperForm.cs">
+    <Compile Include="Controller\KeyTyperForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KeyTyperForm.Designer.cs">
+    <Compile Include="Controller\KeyTyperForm.Designer.cs">
       <DependentUpon>KeyTyperForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LabelExt.cs">
+    <Compile Include="View\LabelExt.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Model\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddPhraseForm.resx">
+    <EmbeddedResource Include="Controller\AddPhraseForm.resx">
       <DependentUpon>AddPhraseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResultsForm.resx">
+    <EmbeddedResource Include="Controller\ResultsForm.resx">
       <DependentUpon>ResultsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KeyTyperForm.resx">
+    <EmbeddedResource Include="Controller\KeyTyperForm.resx">
       <DependentUpon>KeyTyperForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -111,5 +111,6 @@
   <ItemGroup>
     <None Include="Resources\coolArrowUp.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

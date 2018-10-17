@@ -193,6 +193,7 @@
             this.Controls.Add(this.resultsGroup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ResultsForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Results";
             this.resultsGroup.ResumeLayout(false);

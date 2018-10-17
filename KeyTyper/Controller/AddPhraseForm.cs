@@ -23,6 +23,7 @@ namespace KeyTyper
     /// -----------------------------------------------------------------------
     public partial class AddPhraseForm : Form
     {
+
         /// -------------------------------------------------------------------
         /// <summary>Constructor</summary>
         ///

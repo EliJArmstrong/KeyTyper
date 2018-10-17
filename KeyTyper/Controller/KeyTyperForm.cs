@@ -37,12 +37,13 @@ namespace KeyTyper
         List<string> typePhrases = new List<string>();
 
         private string selectedLevelString;
-        private string phraseTxtFile = "../../Resources/SetUpLevelsAndText.txt";
-        private string userPhraseTxtFile = "../../Resources/userPhreases.txt";
+        private static string phraseTxtFile = "../../Resources/SetUpLevelsAndText.txt";
+        private static string userPhraseTxtFile = "../../Resources/userPhreases.txt";
 
         PointTracker pointTracker = new PointTracker();
 
-        char[] removeChar = { '\n', '\r', '\t' };
+        private static char[] removeChars = { '\n', '\r', '\t' };
+        private static char[] separators = { '/' };
 
         public KeyTyperForm()
         {
@@ -219,7 +220,7 @@ namespace KeyTyper
         private void LevelSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox comboBox = sender as ComboBox;
-            string pasedString = typePhrases[comboBox.SelectedIndex].Trim(removeChar);
+            string pasedString = typePhrases[comboBox.SelectedIndex].Trim(removeChars);
             selectedTextBox.Text = pasedString;
             selectedLevelString = pasedString;
             ResetUI();
@@ -237,9 +238,9 @@ namespace KeyTyper
 
         private string[] ParseTxtFile(string filePath)
         {
-            char[] cool = { '/' };
+            char[] separator = { '/' };
             string readin = File.ReadAllText(filePath);
-            return readin.Split(cool, StringSplitOptions.RemoveEmptyEntries);
+            return readin.Split(separator, StringSplitOptions.RemoveEmptyEntries);
         }
 
         private void AddPhraseBtn_Click(object sender, EventArgs e)
@@ -256,7 +257,7 @@ namespace KeyTyper
 
                 for (int i = 0; i < addedPhreases.Length; i++)
                 {
-                    string trimmedString = addedPhreases[i].Trim(removeChar);
+                    string trimmedString = addedPhreases[i].Trim(removeChars);
                     if (!typePhrases.Contains(trimmedString))
                     {
                         if (!trimmedString.Equals(""))
