@@ -4,8 +4,8 @@
 // this assignment.</remarks>
 // <file>LabelExt.cs</file>
 // <date>2018-10-16</date>
-// <summary>This class is to represents the abstract idea of a Two Dimensional 
-// Shape.</summary> 
+// <summary>This is an "Extension" of the label to add an Keys enum to help 
+// link a label to a key.</summary> 
 // <remarks>Time taken to develop, write, test and debug
 // solution. About 4 hours. </remarks>
 

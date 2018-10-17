@@ -15,6 +15,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 // ----------------------------------------------------------------------------
@@ -22,35 +23,32 @@ using System.Windows.Forms;
 // ----------------------------------------------------------------------------
 namespace KeyTyper
 {
+    /// -----------------------------------------------------------------------
+    /// <summary>The KeyTyperForm partial class with base of Form.</summary>
+    /// -----------------------------------------------------------------------
     public partial class KeyTyperForm : Form
     {
+
+        // Holds a Dictionary with a Keys enum as the key and a LabelExt as 
+        // a value.
         private Dictionary<Keys, LabelExt> keyAndLabel =
             new Dictionary<Keys, LabelExt>();
 
-        string[] typePhrases = { "The quick brown fox jumps over the lazy dog.",
-            "Roses are red, violets are blue, I'm a good typer and so are you."
-            , "Everyday somewhere in the world another unsung hero is born. " +
-                "Someone who is willing, to lay his life on the line to save" +
-                " another living creature, on this wonderful planet of ours." +
-                " To go out of their way, and risk life and limb to save" +
-                " something, from danger and certain death. These unsung" +
-                " heroes don’t want medals, glory or even fame. In fact," +
-                " most would walk away afterwards, without anyone ever" +
-                " knowing their name. It is not that they feel guilty. " +
-                "They just feel that they haven’t done anything that is " +
-                "special or something someone else wouldn’t have probably " +
-                "done. Therefore, to all those unsung heroes this poem is " +
-                "just for you. For all the lives that you save each and " +
-                "every day. David Harris" };
+        List<string> typePhrases = new List<string>();
 
         private string selectedLevelString;
+        private string phraseTxtFile = "../../Resources/SetUpLevelsAndText.txt";
+        private string userPhraseTxtFile = "../../Resources/userPhreases.txt";
 
         PointTracker pointTracker = new PointTracker();
+
+        char[] removeChar = { '\n', '\r', '\t' };
 
         public KeyTyperForm()
         {
             InitializeComponent();
             AddLabelToDict(this);
+            SetUpLevelsAndText();
             DisableUI();
         }
 
@@ -83,11 +81,9 @@ namespace KeyTyper
                 ToTheEnd();
                 if (userInputBox.Text.Length == selectedLevelString.Length)
                 {
-                    showResultsForm();
+                    ShowResultsForm();
                 }
             }
-
-
         }
 
         private void UserInputBox_KeyDown(object sender, KeyEventArgs e)
@@ -170,13 +166,14 @@ namespace KeyTyper
             infoLbl.Visible = false;
         }
 
-        private void showResultsForm()
+        private void ShowResultsForm()
         {
-            ResultsForm resultForm = new ResultsForm();
-            DisableUI();
-            string space = "                          ";
-            resultForm.SetLabels(selectedLevelString.Length, pointTracker.Red,
+            ResultsForm resultForm = 
+                new ResultsForm(selectedLevelString.Length, pointTracker.Red,
                 pointTracker.Blue);
+            string space = "                          ";
+
+            DisableUI();
             resultForm.Show();
             userInputBox.Text = space + "Select a level to start again.";
             DeselectLabels();
@@ -222,10 +219,54 @@ namespace KeyTyper
         private void LevelSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox comboBox = sender as ComboBox;
-            selectedTextBox.Text = typePhrases[comboBox.SelectedIndex];
-            selectedLevelString = typePhrases[comboBox.SelectedIndex];
+            string pasedString = typePhrases[comboBox.SelectedIndex].Trim(removeChar);
+            selectedTextBox.Text = pasedString;
+            selectedLevelString = pasedString;
             ResetUI();
             pointTracker.ResetPoints();
+        }
+
+        private void SetUpLevelsAndText()
+        {
+            typePhrases.AddRange(ParseTxtFile(phraseTxtFile));
+            for (int i = 1; i <= typePhrases.Count; i++)
+            {
+                levelSelector.Items.Add($"             Level {i}");
+            }
+        }
+
+        private string[] ParseTxtFile(string filePath)
+        {
+            char[] cool = { '/' };
+            string readin = File.ReadAllText(filePath);
+            return readin.Split(cool, StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        private void AddPhraseBtn_Click(object sender, EventArgs e)
+        {
+            AddPhraseForm addPhraseForm = new AddPhraseForm();
+            addPhraseForm.Show();
+        }
+
+        private void KeyTyperForm_Activated(object sender, EventArgs e)
+        {
+            if (File.Exists(userPhraseTxtFile))
+            {
+                string[] addedPhreases = ParseTxtFile(userPhraseTxtFile);
+
+                for (int i = 0; i < addedPhreases.Length; i++)
+                {
+                    string trimmedString = addedPhreases[i].Trim(removeChar);
+                    if (!typePhrases.Contains(trimmedString))
+                    {
+                        if (!trimmedString.Equals(""))
+                        {
+                            typePhrases.Add(trimmedString);
+                            levelSelector.Items.Add($"      Custom Level {i+1}");
+                        }
+                    }
+                }
+            }
         }
     }
 }

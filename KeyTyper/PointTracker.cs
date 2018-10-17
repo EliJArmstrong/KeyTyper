@@ -26,7 +26,7 @@ namespace KeyTyper
         /// <remarks>
         /// The constructor sets the points to zero for both teams
         /// </remarks>
-        /// ---------------------------------------------------------------
+        /// -------------------------------------------------------------------
         public PointTracker()
         {
             ResetPoints();

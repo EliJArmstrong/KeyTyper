@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPhraseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPhraseForm.Designer.cs">
+      <DependentUpon>AddPhraseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PointTracker.cs" />
     <Compile Include="ResultsForm.cs">
       <SubType>Form</SubType>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddPhraseForm.resx">
+      <DependentUpon>AddPhraseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResultsForm.resx">
       <DependentUpon>ResultsForm.cs</DependentUpon>
     </EmbeddedResource>

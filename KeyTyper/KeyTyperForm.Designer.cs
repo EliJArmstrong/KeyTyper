@@ -31,6 +31,7 @@ namespace KeyTyper
         private void InitializeComponent()
         {
             this.gradientGroup1 = new KeyTyper.GradientGroup();
+            this.addPhraseBtn = new System.Windows.Forms.Button();
             this.levelSelector = new System.Windows.Forms.ComboBox();
             this.upArrowImg = new System.Windows.Forms.PictureBox();
             this.infoLbl = new System.Windows.Forms.Label();
@@ -103,6 +104,7 @@ namespace KeyTyper
             this.gradientGroup1.BackColor = System.Drawing.SystemColors.Control;
             this.gradientGroup1.ColorBottom = System.Drawing.Color.Navy;
             this.gradientGroup1.ColorTop = System.Drawing.Color.Teal;
+            this.gradientGroup1.Controls.Add(this.addPhraseBtn);
             this.gradientGroup1.Controls.Add(this.levelSelector);
             this.gradientGroup1.Controls.Add(this.upArrowImg);
             this.gradientGroup1.Controls.Add(this.infoLbl);
@@ -172,14 +174,21 @@ namespace KeyTyper
             this.gradientGroup1.TabIndex = 108;
             this.gradientGroup1.TabStop = false;
             // 
+            // addPhraseBtn
+            // 
+            this.addPhraseBtn.Location = new System.Drawing.Point(738, 71);
+            this.addPhraseBtn.Name = "addPhraseBtn";
+            this.addPhraseBtn.Size = new System.Drawing.Size(163, 23);
+            this.addPhraseBtn.TabIndex = 198;
+            this.addPhraseBtn.Text = "Add Your Own Text Phrase";
+            this.addPhraseBtn.UseVisualStyleBackColor = true;
+            this.addPhraseBtn.Click += new System.EventHandler(this.AddPhraseBtn_Click);
+            // 
             // levelSelector
             // 
             this.levelSelector.FormattingEnabled = true;
-            this.levelSelector.Items.AddRange(new object[] {
-            "             Level 1",
-            "             Level 2",
-            "             Level 3"});
             this.levelSelector.Location = new System.Drawing.Point(394, 99);
+            this.levelSelector.MaxDropDownItems = 25;
             this.levelSelector.Name = "levelSelector";
             this.levelSelector.Size = new System.Drawing.Size(121, 21);
             this.levelSelector.TabIndex = 199;
@@ -957,6 +966,7 @@ namespace KeyTyper
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KeyTyper";
+            this.Activated += new System.EventHandler(this.KeyTyperForm_Activated);
             this.gradientGroup1.ResumeLayout(false);
             this.gradientGroup1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upArrowImg)).EndInit();
@@ -1030,6 +1040,7 @@ namespace KeyTyper
         private System.Windows.Forms.Label infoLbl;
         private System.Windows.Forms.PictureBox upArrowImg;
         private System.Windows.Forms.ComboBox levelSelector;
+        private System.Windows.Forms.Button addPhraseBtn;
     }
 }
 
