@@ -31,11 +31,9 @@ namespace KeyTyper
         private void InitializeComponent()
         {
             this.gradientGroup1 = new KeyTyper.GradientGroup();
+            this.levelSelector = new System.Windows.Forms.ComboBox();
             this.upArrowImg = new System.Windows.Forms.PictureBox();
             this.infoLbl = new System.Windows.Forms.Label();
-            this.levelThreeBtn = new System.Windows.Forms.Button();
-            this.LevelTwoBtn = new System.Windows.Forms.Button();
-            this.levelOneBtn = new System.Windows.Forms.Button();
             this.selectedTextBox = new System.Windows.Forms.TextBox();
             this.backKeyLbl = new KeyTyper.LabelExt();
             this.userInputBox = new System.Windows.Forms.RichTextBox();
@@ -105,11 +103,9 @@ namespace KeyTyper
             this.gradientGroup1.BackColor = System.Drawing.SystemColors.Control;
             this.gradientGroup1.ColorBottom = System.Drawing.Color.Navy;
             this.gradientGroup1.ColorTop = System.Drawing.Color.Teal;
+            this.gradientGroup1.Controls.Add(this.levelSelector);
             this.gradientGroup1.Controls.Add(this.upArrowImg);
             this.gradientGroup1.Controls.Add(this.infoLbl);
-            this.gradientGroup1.Controls.Add(this.levelThreeBtn);
-            this.gradientGroup1.Controls.Add(this.LevelTwoBtn);
-            this.gradientGroup1.Controls.Add(this.levelOneBtn);
             this.gradientGroup1.Controls.Add(this.selectedTextBox);
             this.gradientGroup1.Controls.Add(this.backKeyLbl);
             this.gradientGroup1.Controls.Add(this.userInputBox);
@@ -176,6 +172,20 @@ namespace KeyTyper
             this.gradientGroup1.TabIndex = 108;
             this.gradientGroup1.TabStop = false;
             // 
+            // levelSelector
+            // 
+            this.levelSelector.FormattingEnabled = true;
+            this.levelSelector.Items.AddRange(new object[] {
+            "             Level 1",
+            "             Level 2",
+            "             Level 3"});
+            this.levelSelector.Location = new System.Drawing.Point(394, 99);
+            this.levelSelector.Name = "levelSelector";
+            this.levelSelector.Size = new System.Drawing.Size(121, 21);
+            this.levelSelector.TabIndex = 199;
+            this.levelSelector.Text = "       Select a level    ";
+            this.levelSelector.SelectedIndexChanged += new System.EventHandler(this.LevelSelector_SelectedIndexChanged);
+            // 
             // upArrowImg
             // 
             this.upArrowImg.BackColor = System.Drawing.Color.Transparent;
@@ -198,36 +208,6 @@ namespace KeyTyper
             this.infoLbl.Size = new System.Drawing.Size(202, 50);
             this.infoLbl.TabIndex = 113;
             this.infoLbl.Text = "Type this character \r\nor space.";
-            // 
-            // levelThreeBtn
-            // 
-            this.levelThreeBtn.Location = new System.Drawing.Point(532, 97);
-            this.levelThreeBtn.Name = "levelThreeBtn";
-            this.levelThreeBtn.Size = new System.Drawing.Size(75, 23);
-            this.levelThreeBtn.TabIndex = 2;
-            this.levelThreeBtn.Text = "Level 3";
-            this.levelThreeBtn.UseVisualStyleBackColor = true;
-            this.levelThreeBtn.Click += new System.EventHandler(this.LevelBtn_Click);
-            // 
-            // LevelTwoBtn
-            // 
-            this.LevelTwoBtn.Location = new System.Drawing.Point(411, 97);
-            this.LevelTwoBtn.Name = "LevelTwoBtn";
-            this.LevelTwoBtn.Size = new System.Drawing.Size(75, 23);
-            this.LevelTwoBtn.TabIndex = 1;
-            this.LevelTwoBtn.Text = "Level 2";
-            this.LevelTwoBtn.UseVisualStyleBackColor = true;
-            this.LevelTwoBtn.Click += new System.EventHandler(this.LevelBtn_Click);
-            // 
-            // levelOneBtn
-            // 
-            this.levelOneBtn.Location = new System.Drawing.Point(292, 97);
-            this.levelOneBtn.Name = "levelOneBtn";
-            this.levelOneBtn.Size = new System.Drawing.Size(75, 23);
-            this.levelOneBtn.TabIndex = 0;
-            this.levelOneBtn.Text = "Level 1";
-            this.levelOneBtn.UseVisualStyleBackColor = true;
-            this.levelOneBtn.Click += new System.EventHandler(this.LevelBtn_Click);
             // 
             // selectedTextBox
             // 
@@ -970,8 +950,10 @@ namespace KeyTyper
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 528);
             this.Controls.Add(this.gradientGroup1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "KeyTyperForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KeyTyper";
@@ -1045,11 +1027,9 @@ namespace KeyTyper
         private LabelExt rControlKeyLbl;
         private GradientGroup gradientGroup1;
         private System.Windows.Forms.TextBox selectedTextBox;
-        private System.Windows.Forms.Button levelThreeBtn;
-        private System.Windows.Forms.Button LevelTwoBtn;
-        private System.Windows.Forms.Button levelOneBtn;
         private System.Windows.Forms.Label infoLbl;
         private System.Windows.Forms.PictureBox upArrowImg;
+        private System.Windows.Forms.ComboBox levelSelector;
     }
 }
 

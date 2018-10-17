@@ -1,15 +1,30 @@
-﻿//https://bit.ly/2ybMsJD // Helped with getting a the labels in a form.
+﻿// <author>Eli Armstrong</author>
+// <remarks>I pledge my word of honor that I have abided
+// by the CSN Academic Integrity Policy while completing
+// this assignment.</remarks>
+// <file>KeyTyperForm.cs</file>
+// <date>2018-10-16</date>
+// <summary>This class is to represents the abstract idea of a Two Dimensional 
+// Shape.</summary> 
+// <remarks>Time taken to develop, write, test and debug
+// solution. About 4 hours. </remarks>
+// <note>Gradient code from here: 
+//https://bit.ly/2ybMsJD Helped with getting a the labels in a form. </note>
+
 
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
+// ----------------------------------------------------------------------------
+// The Name Space for KeyTyper.
+// ----------------------------------------------------------------------------
 namespace KeyTyper
 {
     public partial class KeyTyperForm : Form
     {
-        private Dictionary<Keys, LabelExt> keyAndLabel = 
+        private Dictionary<Keys, LabelExt> keyAndLabel =
             new Dictionary<Keys, LabelExt>();
 
         string[] typePhrases = { "The quick brown fox jumps over the lazy dog.",
@@ -72,7 +87,7 @@ namespace KeyTyper
                 }
             }
 
- 
+
         }
 
         private void UserInputBox_KeyDown(object sender, KeyEventArgs e)
@@ -139,19 +154,11 @@ namespace KeyTyper
             }
         }
 
-        private void LevelBtn_Click(object sender, EventArgs e)
-        {
-            Button senderBtn = sender as Button;
-            selectedTextBox.Text = typePhrases[senderBtn.TabIndex];
-            selectedLevelString = typePhrases[senderBtn.TabIndex];
-            ResetUI();
-            pointTracker.ResetPoints();
-        }
 
-        
         private void DeselectLabels()
         {
-            foreach (var label in keyAndLabel.Values){
+            foreach (var label in keyAndLabel.Values)
+            {
                 label.BackColor = Control.DefaultBackColor;
             }
         }
@@ -173,6 +180,7 @@ namespace KeyTyper
             resultForm.Show();
             userInputBox.Text = space + "Select a level to start again.";
             DeselectLabels();
+            levelSelector.Text = "Select another level  ";
         }
 
         private void CorrectOrError()
@@ -210,7 +218,15 @@ namespace KeyTyper
             upArrowImg.Visible = true;
             infoLbl.Visible = true;
         }
-        
+
+        private void LevelSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+            selectedTextBox.Text = typePhrases[comboBox.SelectedIndex];
+            selectedLevelString = typePhrases[comboBox.SelectedIndex];
+            ResetUI();
+            pointTracker.ResetPoints();
+        }
     }
 }
 

@@ -1,15 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <author>Eli Armstrong</author>
+// <remarks>I pledge my word of honor that I have abided
+// by the CSN Academic Integrity Policy while completing
+// this assignment.</remarks>
+// <file>ResultsForm.cs</file>
+// <date>2018-10-16</date>
+// <summary>This is the code behind the Results form.</summary> 
+// <remarks>Time taken to develop, write, test and debug
+// solution. About 4 hours. </remarks>
+
+using System;
 using System.Windows.Forms;
 
+// ----------------------------------------------------------------------------
+// The Name Space for KeyTyper.
+// ----------------------------------------------------------------------------
 namespace KeyTyper
 {
+    /// -----------------------------------------------------------------------
+    /// <summary>The ResultsFormclass with base of Form.</summary>
+    /// -----------------------------------------------------------------------
     public partial class ResultsForm : Form
     {
         public ResultsForm()
