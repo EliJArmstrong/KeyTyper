@@ -56,9 +56,11 @@
             this.resultsGroup.Controls.Add(this.numOfCharLbl);
             this.resultsGroup.Controls.Add(this.totalNumLbl);
             this.resultsGroup.Controls.Add(this.goodJobLbl);
-            this.resultsGroup.Location = new System.Drawing.Point(0, -7);
+            this.resultsGroup.Location = new System.Drawing.Point(0, -13);
+            this.resultsGroup.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.resultsGroup.Name = "resultsGroup";
-            this.resultsGroup.Size = new System.Drawing.Size(435, 244);
+            this.resultsGroup.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.resultsGroup.Size = new System.Drawing.Size(870, 469);
             this.resultsGroup.TabIndex = 0;
             this.resultsGroup.TabStop = false;
             // 
@@ -67,9 +69,10 @@
             this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.closeBtn.Location = new System.Drawing.Point(169, 203);
+            this.closeBtn.Location = new System.Drawing.Point(338, 390);
+            this.closeBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(83, 27);
+            this.closeBtn.Size = new System.Drawing.Size(166, 52);
             this.closeBtn.TabIndex = 9;
             this.closeBtn.Text = "Okay!!!";
             this.closeBtn.UseVisualStyleBackColor = true;
@@ -81,9 +84,10 @@
             this.accuracyPercentLbl.BackColor = System.Drawing.Color.Transparent;
             this.accuracyPercentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accuracyPercentLbl.ForeColor = System.Drawing.Color.DarkViolet;
-            this.accuracyPercentLbl.Location = new System.Drawing.Point(335, 159);
+            this.accuracyPercentLbl.Location = new System.Drawing.Point(670, 306);
+            this.accuracyPercentLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.accuracyPercentLbl.Name = "accuracyPercentLbl";
-            this.accuracyPercentLbl.Size = new System.Drawing.Size(55, 24);
+            this.accuracyPercentLbl.Size = new System.Drawing.Size(117, 44);
             this.accuracyPercentLbl.TabIndex = 8;
             this.accuracyPercentLbl.Text = "100%";
             this.accuracyPercentLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,9 +98,10 @@
             this.accuracyLbl.BackColor = System.Drawing.Color.Transparent;
             this.accuracyLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accuracyLbl.ForeColor = System.Drawing.Color.DarkViolet;
-            this.accuracyLbl.Location = new System.Drawing.Point(289, 124);
+            this.accuracyLbl.Location = new System.Drawing.Point(578, 238);
+            this.accuracyLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.accuracyLbl.Name = "accuracyLbl";
-            this.accuracyLbl.Size = new System.Drawing.Size(136, 33);
+            this.accuracyLbl.Size = new System.Drawing.Size(267, 67);
             this.accuracyLbl.TabIndex = 7;
             this.accuracyLbl.Text = "Accuracy";
             // 
@@ -106,9 +111,10 @@
             this.CorrectNumLbl.BackColor = System.Drawing.Color.Transparent;
             this.CorrectNumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CorrectNumLbl.ForeColor = System.Drawing.Color.MediumBlue;
-            this.CorrectNumLbl.Location = new System.Drawing.Point(185, 161);
+            this.CorrectNumLbl.Location = new System.Drawing.Point(370, 310);
+            this.CorrectNumLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CorrectNumLbl.Name = "CorrectNumLbl";
-            this.CorrectNumLbl.Size = new System.Drawing.Size(38, 25);
+            this.CorrectNumLbl.Size = new System.Drawing.Size(68, 48);
             this.CorrectNumLbl.TabIndex = 6;
             this.CorrectNumLbl.Text = "42";
             this.CorrectNumLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -119,9 +125,10 @@
             this.correctLbl.BackColor = System.Drawing.Color.Transparent;
             this.correctLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.correctLbl.ForeColor = System.Drawing.Color.MediumBlue;
-            this.correctLbl.Location = new System.Drawing.Point(152, 126);
+            this.correctLbl.Location = new System.Drawing.Point(304, 242);
+            this.correctLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.correctLbl.Name = "correctLbl";
-            this.correctLbl.Size = new System.Drawing.Size(111, 31);
+            this.correctLbl.Size = new System.Drawing.Size(211, 63);
             this.correctLbl.TabIndex = 5;
             this.correctLbl.Text = "Correct";
             // 
@@ -129,11 +136,12 @@
             // 
             this.numOfErrorLbl.AutoSize = true;
             this.numOfErrorLbl.BackColor = System.Drawing.Color.Transparent;
-            this.numOfErrorLbl.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numOfErrorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numOfErrorLbl.ForeColor = System.Drawing.Color.Red;
-            this.numOfErrorLbl.Location = new System.Drawing.Point(45, 161);
+            this.numOfErrorLbl.Location = new System.Drawing.Point(90, 310);
+            this.numOfErrorLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.numOfErrorLbl.Name = "numOfErrorLbl";
-            this.numOfErrorLbl.Size = new System.Drawing.Size(34, 22);
+            this.numOfErrorLbl.Size = new System.Drawing.Size(64, 44);
             this.numOfErrorLbl.TabIndex = 4;
             this.numOfErrorLbl.Text = "25";
             this.numOfErrorLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,9 +152,10 @@
             this.errorLbl.BackColor = System.Drawing.Color.Transparent;
             this.errorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorLbl.ForeColor = System.Drawing.Color.Red;
-            this.errorLbl.Location = new System.Drawing.Point(16, 122);
+            this.errorLbl.Location = new System.Drawing.Point(32, 235);
+            this.errorLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.errorLbl.Name = "errorLbl";
-            this.errorLbl.Size = new System.Drawing.Size(101, 33);
+            this.errorLbl.Size = new System.Drawing.Size(192, 67);
             this.errorLbl.TabIndex = 3;
             this.errorLbl.Text = "Errors";
             // 
@@ -156,9 +165,10 @@
             this.numOfCharLbl.BackColor = System.Drawing.Color.Transparent;
             this.numOfCharLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numOfCharLbl.ForeColor = System.Drawing.Color.Black;
-            this.numOfCharLbl.Location = new System.Drawing.Point(184, 84);
+            this.numOfCharLbl.Location = new System.Drawing.Point(368, 162);
+            this.numOfCharLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.numOfCharLbl.Name = "numOfCharLbl";
-            this.numOfCharLbl.Size = new System.Drawing.Size(46, 31);
+            this.numOfCharLbl.Size = new System.Drawing.Size(89, 63);
             this.numOfCharLbl.TabIndex = 2;
             this.numOfCharLbl.Text = "62";
             // 
@@ -166,11 +176,12 @@
             // 
             this.totalNumLbl.AutoSize = true;
             this.totalNumLbl.BackColor = System.Drawing.Color.Transparent;
-            this.totalNumLbl.Font = new System.Drawing.Font("Ravie", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalNumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalNumLbl.ForeColor = System.Drawing.Color.Black;
-            this.totalNumLbl.Location = new System.Drawing.Point(11, 54);
+            this.totalNumLbl.Location = new System.Drawing.Point(22, 104);
+            this.totalNumLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.totalNumLbl.Name = "totalNumLbl";
-            this.totalNumLbl.Size = new System.Drawing.Size(414, 30);
+            this.totalNumLbl.Size = new System.Drawing.Size(534, 48);
             this.totalNumLbl.TabIndex = 1;
             this.totalNumLbl.Text = "Total Number of Characters";
             // 
@@ -178,20 +189,22 @@
             // 
             this.goodJobLbl.AutoSize = true;
             this.goodJobLbl.BackColor = System.Drawing.Color.Transparent;
-            this.goodJobLbl.Font = new System.Drawing.Font("Mistral", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goodJobLbl.Location = new System.Drawing.Point(146, 16);
+            this.goodJobLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goodJobLbl.Location = new System.Drawing.Point(292, 31);
+            this.goodJobLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.goodJobLbl.Name = "goodJobLbl";
-            this.goodJobLbl.Size = new System.Drawing.Size(116, 38);
+            this.goodJobLbl.Size = new System.Drawing.Size(329, 73);
             this.goodJobLbl.TabIndex = 0;
             this.goodJobLbl.Text = "Good Job!";
             // 
             // ResultsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 235);
+            this.ClientSize = new System.Drawing.Size(860, 452);
             this.Controls.Add(this.resultsGroup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "ResultsForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

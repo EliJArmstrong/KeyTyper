@@ -62,7 +62,7 @@ namespace KeyTyper
         {
             if(phraseBox.TextLength > 0)
             {
-                File.AppendAllText("../../Resources/userPhreases.txt",
+                File.AppendAllText("../../Resources/userPhrases.txt",
                     phraseBox.Text + '/' + '\n');
                 phraseBox.Text = "";
                 MessageBox.Show("Phrase added.");
